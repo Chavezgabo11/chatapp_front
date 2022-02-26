@@ -33,7 +33,17 @@
 
     button { 
         font-size: 1em; 
-        background-color: #D92C4C; 
+        background-color: $message-bg; 
+        color: $knockout-color;
+        padding: 0.8em 1.2em;
+        border: thin solid $border-color;
+        border-radius: $rounded;
+        margin: 1em  0.5em;
+    }
+
+    button:hover { 
+        font-size: 1em; 
+        background-color: #718355; 
         color: $knockout-color;
         padding: 0.8em 1.2em;
         border: thin solid $border-color;

@@ -1,4 +1,4 @@
-.disabled { opacity: 0.4; }
+.disabled { opacity: 0.5; }
 
 #chat { 
     display: grid;
@@ -87,7 +87,7 @@ textarea:hover {
     font-size: 1.5em;
     text-align: center;
     border-radius: 100%;
-    background-color: #D92C4C;
+    background-color: $message-bg;
 
     i { color: white; }
 }
@@ -102,7 +102,7 @@ textarea:hover {
     font-size: 1.5em;
     text-align: center;
     border-radius: 100%;
-    background-color: #d60229;
+    background-color: #718355;
 
     i { color: white; }
 }
