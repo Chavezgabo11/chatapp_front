@@ -1,7 +1,7 @@
 <template>
   <section id="welcome-wrapper">
     <h1 class="hidden">Sign In</h1>
-    <h2>Welcome to the Chat App</h2>
+    <h2>Welcome to Gabriel Chavez Chat App</h2>
 
     <input type="text" name="username" v-model="username" placeholder="Your Name">
 

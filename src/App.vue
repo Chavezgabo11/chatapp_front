@@ -20,7 +20,7 @@
 
 header {
   text-align: center;
-  background-color: #D92C4C;
+  background-color: #414833;
   height: 80px;
   padding: 50px;
   color: white;

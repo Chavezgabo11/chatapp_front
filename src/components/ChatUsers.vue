@@ -12,7 +12,6 @@
 export default {
     name: "ChatUser",
     props: {
-        avatar: String,
         username: String
     }
 }

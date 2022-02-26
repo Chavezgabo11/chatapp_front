@@ -84,13 +84,15 @@ export default {
 
     computed: {
             canSend: function() {
-            return (this.socketID.trim() === "");
+                return (this.message.trim() === "");
             }
     },
 
     data() {
         return {
             socketID: '',
+            time: '',
+            nameUser: '',
             users: [],
             message: '',
             messages: [],
@@ -110,9 +112,10 @@ export default {
     methods: {
         sendMessage(){
             this.socket.emit('SEND_MESSAGE', {user: this.ChatUserName || "Anonymous", message: this.message});
+            console.log(CurrentID);
 
             // empty put the text area and get ready to input a new message
-            this.message = '';
+            this.message = '';    
         },
         trySendMessage(event) {
             console.log('typing a message');
