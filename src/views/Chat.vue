@@ -112,7 +112,6 @@ export default {
     methods: {
         sendMessage(){
             this.socket.emit('SEND_MESSAGE', {user: this.ChatUserName || "Anonymous", message: this.message});
-            console.log(CurrentID);
 
             // empty put the text area and get ready to input a new message
             this.message = '';    
