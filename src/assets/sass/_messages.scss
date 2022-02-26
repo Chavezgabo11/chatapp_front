@@ -1,10 +1,11 @@
 .message-panel {
     float: left;
     clear: both;
-    width: 51%;
+    width: auto;
     background-color: $message-bg;
     margin-left: 7%;
-    color: $knockout-color;
+    margin-right: 15%;
+    color: black;
     box-shadow: 0 2px 10px #ccc;
     margin-bottom: 1em;
     padding: 1em;
@@ -39,6 +40,8 @@
         color: black;
         font-weight: bold;
         font-size: 13px;
+        
+        margin-right: 25px;
     }
 
     .msg-text {
@@ -46,14 +49,21 @@
         margin-top: 10px;
         font-size: 15px;
         margin-bottom: 10px;
+        margin-right: 15px;
+    }
+
+    .time {
+        font-size: 10px;
+        text-align: right;
     }
 }
+
 
 .message-right {
     float: right;
     margin-right: 12%;
     clear: both;
-    width: 51%;
+    width: auto;
     background-color: whitesmoke;
 
     color: black;
@@ -83,7 +93,7 @@
     }
 
     .message-wrapper {
-        margin-left: 1em;
+        margin-left: 10px;
     }
 
     .message-wrapper h1 {
@@ -98,5 +108,11 @@
         margin-top: 10px;
         font-size: 15px;
         margin-bottom: 10px;
+        margin-left: 0px;
+    }
+
+    .time {
+        font-size: 10px;
+        text-align: right;
     }
 }
