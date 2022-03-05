@@ -25,6 +25,9 @@
                     :key="msg.id"
                     :message="msg.message"
                     :username="msg.user"
+                    :messageUser="ChatUserName"
+                    :idKey="socketID"
+                    :socketID="msg.socketID"
                 />
 
                 <section id="text-wrapper">
@@ -54,8 +57,17 @@ export default {
     name: "TheChatComponent",
 
     props: {
-        ChatUserName: String,
-        username: String
+        ChatUserName: String
+    },
+    
+
+    computed: {
+            canSend: function() {
+                return (this.message.trim() === "");
+            },
+            userMatch: function() {
+                return true;
+            }
     },
 
     mounted() {
@@ -72,6 +84,8 @@ export default {
         })
 
         this.socket.on('MESSAGE', (message) => {
+            message.id = this.socketID;
+
             // [...]  is a the spread operator
             // short hand way to add something to an array, or put
             // 2 arrays together, etc
@@ -82,18 +96,13 @@ export default {
         this.socket.on('SOMEONE_TYPING', (data) => console.log('someone is typing', data));
     },
 
-    computed: {
-            canSend: function() {
-                return (this.message.trim() === "");
-            }
-    },
-
     data() {
         return {
             socketID: '',
+            MyId: '',
             time: '',
-            nameUser: '',
             users: [],
+            UserNameForMessage: '',
             message: '',
             messages: [],
             CurrentID: 0,
@@ -111,7 +120,7 @@ export default {
 
     methods: {
         sendMessage(){
-            this.socket.emit('SEND_MESSAGE', {user: this.ChatUserName || "Anonymous", message: this.message});
+            this.socket.emit('SEND_MESSAGE', {user: this.ChatUserName || "Anonymous", message: this.message, socketID: this.socketID});
 
             // empty put the text area and get ready to input a new message
             this.message = '';    
@@ -127,9 +136,10 @@ export default {
                 this.socket.emit('USER_TYPING', { user: this.username || "Anonymous"});
             }
         },
+        
         getNewId() {
             this.CurrentID++;
-            return  this.CurrentID;
+            return this.CurrentID;
         }
         ,
         broadCastJoined() {

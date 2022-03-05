@@ -18,19 +18,14 @@ export default {
     name: 'ChatMessageComponent',
 
     props: {
+        key: String,
         message: String,
-        ChatUserName: String,
-        username: String
+        username: String,
+        messageUser: String,
+        idKey: String,
+        socketID: String
     },
-     computed: {
-        messageRight: function() {
-            console.log( "Username: " + this.username);
-            console.log(this.ChatUserName);
-            return (this.username.trim() === "Anonymous");
-            // return (this.username.trim() == this.currentId);
-        }
-    },
-    methods: {
+    methods: {  
         currentDateTime() {
             const current = new Date();
             const hour = current.getHours();
@@ -42,6 +37,13 @@ export default {
     },
     mounted: function () {
       this.time = this.currentDateTime();
+    },
+    computed: {
+            messageRight: function() {
+                console.log(this.key);
+                console.log(this.idKey);
+                return (this.username === this.messageUser && this.socketID === this.idKey);
+            }
     },
 }
 </script>
