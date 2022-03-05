@@ -1,0 +1,148 @@
+footer {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    color: #001C5D;
+}
+
+#footer-container {
+    margin-top: 20px;
+    border-top: 2px solid black;
+}
+
+a {
+    color: #001C5D;
+}
+
+a:hover {
+    color: black;
+    transition: 0.3s ease;
+}
+
+#left-footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: -120px;
+    margin-left: 3%;
+}
+
+#sub-left-footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-content: center;
+    padding: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: -40px;
+}
+
+#sub-left-footer h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#sub-left-footer h3 {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#sub-left-footer p {
+    width: 60%;
+    font-size: 20px;
+}
+
+#sub-left-footer a {
+    color: #001C5D;
+}
+
+#sub-left-footer a:hover {
+    color: black;
+    transition: 0.3s ease;
+}
+
+#left-sub-left-footer h3 {
+    margin-top: 20px;
+}
+
+#right-sub-left-footer {
+    margin-top: 50px;
+}
+
+#email-footer {
+    margin-top: 30px;
+}
+#copyright {
+    margin-top: -200px;
+    margin-left: -80px;
+    font-size: 22px;
+    padding-bottom: 60px;
+}
+
+#sub-right-footer {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 80%;
+    padding: 50px;
+    margin-top: 150px;
+}
+
+#sub-right-footer h2 {
+    padding-top: 40px;
+    color: #001C5D;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#sub-right-footer p {
+    margin-top: 10px;
+    color: #001C5D;
+    font-size: 20px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    background-color: white;
+    border: 3px solid #001C5D;
+    border-radius: 16px;
+    color: #001C5D;
+    width: 80%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.form-group input:hover {
+    box-shadow: 0px 10px 13px -7px #000000, 1px 5px 15px 5px rgba(0,0,0,0);
+    width: 81%;
+    height: 42px;
+    transition: 0.5s ease;
+}
+
+::placeholder {
+    padding-left: 10px;
+    color: #001C5D;
+    font-size: 15px;
+}
+
+.btn-sign-up {
+    width: 200px;
+    margin-top: 10px;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    border-radius: 35px;
+    border: none;
+    background: linear-gradient(145deg, rgba(0,28,93,1) 0%, rgba(38,46,251,1) 100%);
+    margin-bottom: 50px;
+}
+
+.btn-sign-up:hover {
+    color: #001C5D;
+    box-shadow: 0px 10px 13px -7px #000000, 1px 5px 15px 5px rgba(0,0,0,0);
+    background: whitesmoke;
+    transition: 0.5s ease;
+}

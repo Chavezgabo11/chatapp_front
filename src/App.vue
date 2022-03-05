@@ -1,8 +1,8 @@
 <template>
   <section id="app">
     <header>
-      <h1 class="hidden">Welcome to the Chat App</h1>
-      <h2>Chat App with VueCLI, Socket.io and Express</h2>
+      <h1 class="hidden">Welcome to Gabriel Chavez Chat App</h1>
+      <h2>Gabriel Chavez Chat App with VueCLI, Socket.io and Express</h2>
     </header>
     <!-- Router view is the container that accepts components to render per route -->
     <router-view></router-view>
@@ -10,6 +10,9 @@
 </template>
 
 <style lang="scss">
+
+@import "@/assets/sass/_chat.scss";
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

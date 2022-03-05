@@ -42,10 +42,10 @@ export default {
     .user-panel:hover {
         display: flex;
         background-color: white;
-        padding: 0.5em;
-        box-shadow: 0 2px 10px #ccc;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         border-radius: $rounded;
         margin-bottom: 10px;
+        transition: 0.3s ease;
 
         h3 {
             margin: 10px;
