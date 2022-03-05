@@ -1,4 +1,4 @@
-# chatapp_front
+# Chaevz_G_chatapp_front
 
 ## Project setup
 ```
